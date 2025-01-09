@@ -1,0 +1,11 @@
+<div class="d-flex flex-column gap-4 w-25 mx-auto my-5">
+  <h1>Add a movie</h1>
+
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.input :comment, label: "Comment:" %>
+    <%= f.association :movie %>
+    <%= f.submit %>
+  <% end %>
+
+  <p><%= link_to "Cancel", list_path(@list), class: "btn btn-secondary" %></p>
+</div>
