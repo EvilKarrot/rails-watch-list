@@ -1,6 +1,10 @@
 <div style="position: fixed; top: 0; left: 0; right: 0; z-index: -1;
   <% if @list.photo.attached? %>
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= cl_image_path(@list.photo.key, height: 200, crop: :fill) %>'); background-size: cover; height: 66vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= cl_image_path(@list.photo.key) %>');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 66vh;
   <% else %>
     background-color: #f4f4f4; height: 66vh;
   <% end %>">
